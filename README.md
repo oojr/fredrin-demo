@@ -1,75 +1,62 @@
-# React + TypeScript + Vite
+# Fredrin Job Application - Developer Portfolio & Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a web application and interactive portfolio submission created specifically for a **Fredrin job application**. It highlights software engineering skills, cross-platform mobile experience with React Native, web application development with React, custom AI developer tooling, and polyglot generalist capabilities (such as Rust).
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Project Overview
 
-## React Compiler
+The application features:
+- **Interactive Portfolio Interface**: Clean navigation switching between overview and detailed 'About Me' sections.
+- **Mobile & Full-Stack Showcase**: Highlighting production React and React Native engineering work.
+- **Custom AI Tooling**: Highlighting custom AI developer assistants built to accelerate mobile development and component generation.
+- **Polyglot & Systems Mindset**: Showcasing continuous learning across ecosystems including Rust.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Framework**: [React 19](https://react.dev/)
+- **Language**: [TypeScript 6](https://www.typescriptlang.org/)
+- **Build Tool**: [Vite 8](https://vitejs.dev/)
+- **Linting & Formatting**: [ESLint 10](https://eslint.org/)
+- **Styling**: Modern Vanilla CSS with dark mode aesthetic and responsive layouts
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 💻 Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Prerequisites
+- Node.js (v18 or higher recommended)
+- npm
 
+### Installation
+
+```bash
+# Install dependencies
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+### Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```bash
+# Start Vite development server
+npm run dev
+```
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Production Build
 
+```bash
+# Run type check and build for production
+npm run build
+
+# Preview production build locally
+npm run preview
+```
+
+### Linting
+
+```bash
+# Run ESLint
+npm run lint
 ```
